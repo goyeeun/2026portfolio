@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>객실 미리보기 · 숲결 SOOPGYUL</title>
+  <meta name="description" content="숲결 펜션의 배치도와 객실 리스트를 한눈에 미리보기로 확인하세요." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Gowun+Batang:wght@400;700&family=Nanum+Myeongjo:wght@400;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="nav-slot"></div>
+
+  <!-- 배너 -->
+  <section class="hero hero--inner">
+    <div class="hero__slides">
+      <div class="hero__slide is-active" style="background-image:url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1920&q=80');">
+        <div class="hero__inner">
+          <p class="hero__eyebrow">Rooms</p>
+          <h1>미리보기</h1>
+          <p class="breadcrumb">미리보기</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 인트로 -->
+  <section class="section--tight" style="padding-top:90px;">
+    <div class="wrap center reveal" style="max-width:720px;">
+      <p class="eyebrow">Stay in Comfort</p>
+      <h2 class="title">숲결의 객실을<br>한눈에 미리보기</h2>
+      <p class="lead">펜션 배치도로 객실의 위치를 살펴보고, 마음에 드는 객실을 선택하면 더 많은 사진과 상세 정보를 확인할 수 있습니다.</p>
+    </div>
+  </section>
+
+  <!-- 배치도 -->
+  <section class="section--tight" style="padding-top:40px;padding-bottom:20px;">
+    <div class="wrap">
+      <div class="center reveal" style="margin-bottom:36px;">
+        <p class="eyebrow">Site Map</p>
+        <h2 class="title">펜션 배치도</h2>
+      </div>
+      <div class="layout-map__img reveal">
+        <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1400&q=80" alt="숲결 펜션 배치도" />
+      </div>
+    </div>
+  </section>
+
+  <!-- 객실 리스트 -->
+  <section class="section--tight" style="padding-top:40px;padding-bottom:50px;">
+    <div class="wrap">
+      <div class="center reveal" style="margin-bottom:36px;">
+        <p class="eyebrow">Room List</p>
+        <h2 class="title">객실 리스트</h2>
+        <p class="lead" style="max-width:640px;margin:14px auto 0;">객실을 선택하면 상세 사진과 정보를 볼 수 있습니다.</p>
+      </div>
+      <div class="room-slider reveal">
+        <button class="room-slider__arrow room-slider__arrow--prev" aria-label="이전 객실">&#8249;</button>
+        <div class="room-slider__viewport">
+          <div class="room-slider__track" data-room-list></div>
+        </div>
+        <button class="room-slider__arrow room-slider__arrow--next" aria-label="다음 객실">&#8250;</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="cta__bg" style="background-image:url('https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=1920&q=80');"></div>
+    <div class="cta__inner wrap reveal">
+      <p class="eyebrow" style="color:var(--wood-light);">Reservation</p>
+      <h2 class="title">마음에 드는 객실을 찾으셨나요?</h2>
+      <p class="lead">원하시는 날짜의 객실을 지금 예약하세요.</p>
+      <p style="margin-top:30px;">
+        <a href="reserve-booking.html" class="btn btn--ghost">예약하기</a>
+      </p>
+    </div>
+  </section>
+
+  <div id="footer-slot"></div>
+  <script src="script.js"></script>
+</body>
+</html>

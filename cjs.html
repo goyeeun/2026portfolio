@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>씨에지에스 — Portfolio | 고예은</title>
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/style.css">
+<script>
+    (function () {
+        try {
+            var saved = localStorage.getItem('theme');
+            var prefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+            var theme = saved || (prefersLight ? 'light' : 'dark');
+            document.documentElement.dataset.theme = theme;
+        } catch (e) {}
+    })();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<div id="wrap">
+    <header id="header">
+        <div class="header-inner">
+            <h1 class="logo"><a href="index.html?skipIntro=1">GO YE EUN</a></h1>
+            <nav class="nav">
+                <ul>
+                    <li class="nav-about">
+                        <button type="button" class="dark-light-toggle dark-light-toggle--nav" aria-label="다크/라이트 모드 전환">
+                            <span class="icon30 sun" aria-hidden="true">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"/></svg>
+                            </span>
+                            <span class="icon30 moon" aria-hidden="true">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"/></svg>
+                            </span>
+                        </button>
+                        <a href="index.html#about">About</a>
+                    </li>
+                    <li><a href="index.html#work">Work</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button type="button" class="dark-light-toggle dark-light-toggle--mobile" aria-label="다크/라이트 모드 전환">
+                    <span class="icon30 sun" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"/></svg>
+                    </span>
+                    <span class="icon30 moon" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"/></svg>
+                    </span>
+                </button>
+                <button type="button" class="nav-toggle" aria-label="메뉴 열기">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section id="hero" class="section hero hero--project">
+        <div class="hero-bg">
+            <div class="hero-image" style="background: linear-gradient(135deg, #1a1a2e 0%, #1a1a1a 100%);" aria-hidden="true"></div>
+            <div class="fx-grain" aria-hidden="true"></div>
+            <div class="hero-overlay"></div>
+            <canvas class="hero-gradient" aria-hidden="true"></canvas>
+        </div>
+        <div class="hero-content">
+            <p class="hero-label">Project</p>
+            <h2 class="hero-title">CJS</h2>
+            <a href="index.html#work" class="hero-cta">작업 목록으로</a>
+        </div>
+    </section>
+
+    <section class="section portfolio-detail">
+        <div class="container">
+            <h2 class="section-title">Overview</h2>
+            <div class="portfolio-body">
+                <p>오디오트립 브랜드의 제품 홍보를 위해 팝업 페이지를 제작했습니다. <br>
+                    무게감 있는 컬러와 여백을 활용해 브랜드 분위기를 자연스럽게 담아냈고,<br>
+                     기존 자회사의 톤을 맞추어서 작업을 진행함으로써 방문자가 제품을 보고<br>
+                      문의로 이어지는 흐름으로 작업을 진행하였습니다.
+                </p>
+                <ul class="portfolio-meta">
+                    <li><span class="portfolio-meta-label">역할</span><span class="portfolio-meta-value">팝업 디자인</span></li>
+                    <li><span class="portfolio-meta-label">기간</span><span class="portfolio-meta-value">2022년 3월–6월</span></li>
+                    <li><span class="portfolio-meta-label">도구</span><span class="portfolio-meta-value">일러스트, 포토샵</span></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="section work-showcase" aria-labelledby="showcase-title-cgs">
+        <div class="container">
+            <h2 id="showcase-title-cgs" class="section-title">Deliverables</h2>
+            <p class="section-desc">홈페이지·인스타그램 팝업 시안입니다.</p>
+
+            <h3 class="showcase-heading">홈페이지 팝업</h3>
+            <p class="showcase-lead">홈페이지 메인에 노출되는 팝업 시안입니다. 썸네일을 누르면 원본 크기로 확인할 수 있습니다.</p>
+            <div class="work-slider-wrap popup-slider-wrap">
+                <button type="button" class="work-btn work-btn-prev" aria-label="이전 슬라이드">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+                </button>
+                <button type="button" class="work-btn work-btn-next" aria-label="다음 슬라이드">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+                </button>
+                <div class="work-slider">
+                    <div class="work-track">
+                        <div class="work-slide">
+                            <ul class="work-list">
+                                <li class="work-item">
+                                    <button type="button" class="popup-tile"
+                                        data-lb-theme="cgs"
+                                        data-lb-title="홈페이지 팝업 01"
+                                        data-lb-desc="홈페이지 팝업 시안 01입니다.">
+                                        <div class="popup-tile__shell">
+                                            <div class="popup-tile__preview" aria-hidden="true">
+                                                <img class="popup-tile__preview-image" src="./cjs_popup/homepage_banner/1.jpg" alt="홈페이지 팝업 01 미리보기">
+                                            </div>
+                                            <div class="popup-tile__meta">
+                                                <span class="popup-tile__label">홈페이지 팝업 01</span>
+                                                <span class="popup-tile__hint">홈페이지 배너</span>
+                                            </div>
+                                        </div>
+                                    </button>
+                                    <img class="popup-tile__lb-image" src="./cjs_popup/homepage_banner/1.jpg" alt="홈페이지 팝업 01 시안" hidden>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="work-slide">
+                            <ul class="work-list">
+                                <li class="work-item">
+                                    <button type="button" class="popup-tile"
+                                        data-lb-theme="cgs"
+                                        data-lb-title="홈페이지 팝업 02"
+                                        data-lb-desc="홈페이지 팝업 시안 02입니다.">
+                                        <div class="popup-tile__shell">
+                                            <div class="popup-tile__preview" aria-hidden="true">
+                                                <img class="popup-tile__preview-image" src="./cjs_popup/homepage_banner/2.jpg" alt="홈페이지 팝업 02 미리보기">
+                                            </div>
+                                            <div class="popup-tile__meta">
+                                                <span class="popup-tile__label">홈페이지 팝업 02</span>
+                                                <span class="popup-tile__hint">홈페이지 배너</span>
+                                            </div>
+                                        </div>
+                                    </button>
+                                    <img class="popup-tile__lb-image" src="./cjs_popup/homepage_banner/2.jpg" alt="홈페이지 팝업 02 시안" hidden>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="work-slide">
+                            <ul class="work-list">
+                                <li class="work-item">
+                                    <button type="button" class="popup-tile"
+                                        data-lb-theme="cgs"
+                                        data-lb-title="홈페이지 팝업 03"
+                                        data-lb-desc="홈페이지 팝업 시안 03입니다.">
+                                        <div class="popup-tile__shell">
+                                            <div class="popup-tile__preview" aria-hidden="true">
+                                                <img class="popup-tile__preview-image" src="./cjs_popup/homepage_banner/3.jpg" alt="홈페이지 팝업 03 미리보기">
+                                            </div>
+                                            <div class="popup-tile__meta">
+                                                <span class="popup-tile__label">홈페이지 팝업 03</span>
+                                                <span class="popup-tile__hint">홈페이지 배너</span>
+                                            </div>
+                                        </div>
+                                    </button>
+                                    <img class="popup-tile__lb-image" src="./cjs_popup/homepage_banner/3.jpg" alt="홈페이지 팝업 03 시안" hidden>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="work-slide">
+                            <ul class="work-list">
+                                <li class="work-item">
+                                    <button type="button" class="popup-tile"
+                                        data-lb-theme="cgs"
+                                        data-lb-title="홈페이지 팝업 04"
+                                        data-lb-desc="홈페이지 팝업 시안 04입니다.">
+                                        <div class="popup-tile__shell">
+                                            <div class="popup-tile__preview" aria-hidden="true">
+                                                <img class="popup-tile__preview-image" src="./cjs_popup/homepage_banner/4.png" alt="홈페이지 팝업 04 미리보기">
+                                            </div>
+                                            <div class="popup-tile__meta">
+                                                <span class="popup-tile__label">홈페이지 팝업 04</span>
+                                                <span class="popup-tile__hint">홈페이지 배너</span>
+                                            </div>
+                                        </div>
+                                    </button>
+                                    <img class="popup-tile__lb-image" src="./cjs_popup/homepage_banner/4.png" alt="홈페이지 팝업 04 시안" hidden>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="work-slide">
+                            <ul class="work-list">
+                                <li class="work-item">
+                                    <button type="button" class="popup-tile"
+                                        data-lb-theme="cgs"
+                                        data-lb-title="홈페이지 팝업 05"
+                                        data-lb-desc="홈페이지 팝업 시안 05입니다.">
+                                        <div class="popup-tile__shell">
+                                            <div class="popup-tile__preview" aria-hidden="true">
+                                                <img class="popup-tile__preview-image" src="./cjs_popup/homepage_banner/5.png" alt="홈페이지 팝업 05 미리보기">
+                                            </div>
+                                            <div class="popup-tile__meta">
+                                                <span class="popup-tile__label">홈페이지 팝업 05</span>
+                                                <span class="popup-tile__hint">홈페이지 배너</span>
+                                            </div>
+                                        </div>
+                                    </button>
+                                    <img class="popup-tile__lb-image" src="./cjs_popup/homepage_banner/5.png" alt="홈페이지 팝업 05 시안" hidden>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="work-slide">
+                            <ul class="work-list">
+                                <li class="work-item">
+                                    <button type="button" class="popup-tile"
+                                        data-lb-theme="cgs"
+                                        data-lb-title="홈페이지 팝업 06"
+                                        data-lb-desc="홈페이지 팝업 시안 06입니다.">
+                                        <div class="popup-tile__shell">
+                                            <div class="popup-tile__preview" aria-hidden="true">
+                                                <img class="popup-tile__preview-image" src="./cjs_popup/homepage_banner/6.png" alt="홈페이지 팝업 06 미리보기">
+                                            </div>
+                                            <div class="popup-tile__meta">
+                                                <span class="popup-tile__label">홈페이지 팝업 06</span>
+                                                <span class="popup-tile__hint">홈페이지 배너</span>
+                                            </div>
+                                        </div>
+                                    </button>
+                                    <img class="popup-tile__lb-image" src="./cjs_popup/homepage_banner/6.png" alt="홈페이지 팝업 06 시안" hidden>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-dots" aria-hidden="true"></div>
+            </div>
+
+            <h3 class="showcase-heading">인스타 배너 팝업</h3>
+            <p class="showcase-lead">인스타그램 채널용 배너 팝업 시안입니다. 썸네일을 누르면 원본 크기로 확인할 수 있습니다.</p>
+            <div class="work-slider-wrap popup-slider-wrap">
+                <button type="button" class="work-btn work-btn-prev" aria-label="이전 슬라이드">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+                </button>
+                <button type="button" class="work-btn work-btn-next" aria-label="다음 슬라이드">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+                </button>
+                <div class="work-slider">
+                    <div class="work-track">
+                        <div class="work-slide">
+                            <ul class="work-list">
+                                <li class="work-item">
+                                    <button type="button" class="popup-tile"
+                                        data-lb-theme="cgs"
+                                        data-lb-title="인스타 배너 팝업 01"
+                                        data-lb-desc="인스타그램 배너 팝업 시안 01입니다.">
+                                        <div class="popup-tile__shell">
+                                            <div class="popup-tile__preview" aria-hidden="true">
+                                                <img class="popup-tile__preview-image" src="./cjs_popup/insta_banner/1.jpg" alt="인스타 배너 팝업 01 미리보기">
+                                            </div>
+                                            <div class="popup-tile__meta">
+                                                <span class="popup-tile__label">인스타 배너 팝업 01</span>
+                                                <span class="popup-tile__hint">인스타그램 배너</span>
+                                            </div>
+                                        </div>
+                                    </button>
+                                    <img class="popup-tile__lb-image" src="./cjs_popup/insta_banner/1.jpg" alt="인스타 배너 팝업 01 시안" hidden>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="work-slide">
+                            <ul class="work-list">
+                                <li class="work-item">
+                                    <button type="button" class="popup-tile"
+                                        data-lb-theme="cgs"
+                                        data-lb-title="인스타 배너 팝업 02"
+                                        data-lb-desc="인스타그램 배너 팝업 시안 02입니다.">
+                                        <div class="popup-tile__shell">
+                                            <div class="popup-tile__preview" aria-hidden="true">
+                                                <img class="popup-tile__preview-image" src="./cjs_popup/insta_banner/2.jpg" alt="인스타 배너 팝업 02 미리보기">
+                                            </div>
+                                            <div class="popup-tile__meta">
+                                                <span class="popup-tile__label">인스타 배너 팝업 02</span>
+                                                <span class="popup-tile__hint">인스타그램 배너</span>
+                                            </div>
+                                        </div>
+                                    </button>
+                                    <img class="popup-tile__lb-image" src="./cjs_popup/insta_banner/2.jpg" alt="인스타 배너 팝업 02 시안" hidden>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="work-slide">
+                            <ul class="work-list">
+                                <li class="work-item">
+                                    <button type="button" class="popup-tile"
+                                        data-lb-theme="cgs"
+                                        data-lb-title="인스타 배너 팝업 03"
+                                        data-lb-desc="인스타그램 배너 팝업 시안 03입니다.">
+                                        <div class="popup-tile__shell">
+                                            <div class="popup-tile__preview" aria-hidden="true">
+                                                <img class="popup-tile__preview-image" src="./cjs_popup/insta_banner/3.jpg" alt="인스타 배너 팝업 03 미리보기">
+                                            </div>
+                                            <div class="popup-tile__meta">
+                                                <span class="popup-tile__label">인스타 배너 팝업 03</span>
+                                                <span class="popup-tile__hint">인스타그램 배너</span>
+                                            </div>
+                                        </div>
+                                    </button>
+                                    <img class="popup-tile__lb-image" src="./cjs_popup/insta_banner/3.jpg" alt="인스타 배너 팝업 03 시안" hidden>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="work-slide">
+                            <ul class="work-list">
+                                <li class="work-item">
+                                    <button type="button" class="popup-tile"
+                                        data-lb-theme="cgs"
+                                        data-lb-title="인스타 배너 팝업 04"
+                                        data-lb-desc="인스타그램 배너 팝업 시안 04입니다.">
+                                        <div class="popup-tile__shell">
+                                            <div class="popup-tile__preview" aria-hidden="true">
+                                                <img class="popup-tile__preview-image" src="./cjs_popup/insta_banner/4.jpg" alt="인스타 배너 팝업 04 미리보기">
+                                            </div>
+                                            <div class="popup-tile__meta">
+                                                <span class="popup-tile__label">인스타 배너 팝업 04</span>
+                                                <span class="popup-tile__hint">인스타그램 배너</span>
+                                            </div>
+                                        </div>
+                                    </button>
+                                    <img class="popup-tile__lb-image" src="./cjs_popup/insta_banner/4.jpg" alt="인스타 배너 팝업 04 시안" hidden>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="work-slide">
+                            <ul class="work-list">
+                                <li class="work-item">
+                                    <button type="button" class="popup-tile"
+                                        data-lb-theme="cgs"
+                                        data-lb-title="인스타 배너 팝업 05"
+                                        data-lb-desc="인스타그램 배너 팝업 시안 05입니다.">
+                                        <div class="popup-tile__shell">
+                                            <div class="popup-tile__preview" aria-hidden="true">
+                                                <img class="popup-tile__preview-image" src="./cjs_popup/insta_banner/5.jpg" alt="인스타 배너 팝업 05 미리보기">
+                                            </div>
+                                            <div class="popup-tile__meta">
+                                                <span class="popup-tile__label">인스타 배너 팝업 05</span>
+                                                <span class="popup-tile__hint">인스타그램 배너</span>
+                                            </div>
+                                        </div>
+                                    </button>
+                                    <img class="popup-tile__lb-image" src="./cjs_popup/insta_banner/5.jpg" alt="인스타 배너 팝업 05 시안" hidden>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="work-slide">
+                            <ul class="work-list">
+                                <li class="work-item">
+                                    <button type="button" class="popup-tile"
+                                        data-lb-theme="cgs"
+                                        data-lb-title="인스타 배너 팝업 06"
+                                        data-lb-desc="인스타그램 배너 팝업 시안 06입니다.">
+                                        <div class="popup-tile__shell">
+                                            <div class="popup-tile__preview" aria-hidden="true">
+                                                <img class="popup-tile__preview-image" src="./cjs_popup/insta_banner/6.jpg" alt="인스타 배너 팝업 06 미리보기">
+                                            </div>
+                                            <div class="popup-tile__meta">
+                                                <span class="popup-tile__label">인스타 배너 팝업 06</span>
+                                                <span class="popup-tile__hint">인스타그램 배너</span>
+                                            </div>
+                                        </div>
+                                    </button>
+                                    <img class="popup-tile__lb-image" src="./cjs_popup/insta_banner/6.jpg" alt="인스타 배너 팝업 06 시안" hidden>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="work-slide">
+                            <ul class="work-list">
+                                <li class="work-item">
+                                    <button type="button" class="popup-tile"
+                                        data-lb-theme="cgs"
+                                        data-lb-title="인스타 배너 팝업 07"
+                                        data-lb-desc="인스타그램 배너 팝업 시안 07입니다.">
+                                        <div class="popup-tile__shell">
+                                            <div class="popup-tile__preview" aria-hidden="true">
+                                                <img class="popup-tile__preview-image" src="./cjs_popup/insta_banner/7.jpg" alt="인스타 배너 팝업 07 미리보기">
+                                            </div>
+                                            <div class="popup-tile__meta">
+                                                <span class="popup-tile__label">인스타 배너 팝업 07</span>
+                                                <span class="popup-tile__hint">인스타그램 배너</span>
+                                            </div>
+                                        </div>
+                                    </button>
+                                    <img class="popup-tile__lb-image" src="./cjs_popup/insta_banner/7.jpg" alt="인스타 배너 팝업 07 시안" hidden>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="work-slide">
+                            <ul class="work-list">
+                                <li class="work-item">
+                                    <button type="button" class="popup-tile"
+                                        data-lb-theme="cgs"
+                                        data-lb-title="인스타 배너 팝업 08"
+                                        data-lb-desc="인스타그램 배너 팝업 시안 08입니다.">
+                                        <div class="popup-tile__shell">
+                                            <div class="popup-tile__preview" aria-hidden="true">
+                                                <img class="popup-tile__preview-image" src="./cjs_popup/insta_banner/8.jpg" alt="인스타 배너 팝업 08 미리보기">
+                                            </div>
+                                            <div class="popup-tile__meta">
+                                                <span class="popup-tile__label">인스타 배너 팝업 08</span>
+                                                <span class="popup-tile__hint">인스타그램 배너</span>
+                                            </div>
+                                        </div>
+                                    </button>
+                                    <img class="popup-tile__lb-image" src="./cjs_popup/insta_banner/8.jpg" alt="인스타 배너 팝업 08 시안" hidden>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-dots" aria-hidden="true"></div>
+            </div>
+        </div>
+    </section>
+
+    <div class="work-lightbox" id="work-lightbox" hidden role="dialog" aria-modal="true" aria-labelledby="work-lightbox-title">
+        <div class="work-lightbox__backdrop"></div>
+        <div class="work-lightbox__panel">
+            <button type="button" class="work-lightbox__close" aria-label="닫기"><span aria-hidden="true">×</span></button>
+            <div class="work-lightbox__visual"></div>
+            <div class="work-lightbox__body">
+                <h3 id="work-lightbox-title" class="work-lightbox__title"></h3>
+                <p class="work-lightbox__desc"></p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p class="footer-text">© 2026 GO YE EUN. All rights reserved.</p>
+    </footer>
+</div>
+<script src="js/main.js"></script>
+</body>
+
+</html>

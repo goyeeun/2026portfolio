@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko" class="intro-page">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome | 고예은 Portfolio</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/intro.css">
+    <script>
+        (function () {
+            try {
+                var saved = localStorage.getItem('theme');
+                var prefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+                var theme = saved || (prefersLight ? 'light' : 'dark');
+                document.documentElement.dataset.theme = theme;
+            } catch (e) {}
+        })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="intro-page" aria-live="polite">
+        <div class="intro-bg" id="introBg"></div>
+        <div class="intro-content">
+            <p class="intro-title">WELCOME</p>
+            <div class="intro-progress-wrap">
+                <div class="intro-progress-bar" id="introProgressBar"></div>
+            </div>
+            <p class="intro-percent" id="introPercent">0%</p>
+        </div>
+    </div>
+    <script src="js/intro.js"></script>
+</body>
+
+</html>

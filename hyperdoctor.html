@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>하이퍼닥터 — Portfolio | 고예은</title>
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/style.css">
+<script>
+    (function () {
+        try {
+            var saved = localStorage.getItem('theme');
+            var prefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+            var theme = saved || (prefersLight ? 'light' : 'dark');
+            document.documentElement.dataset.theme = theme;
+        } catch (e) {}
+    })();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<div id="wrap">
+    <header id="header">
+        <div class="header-inner">
+            <h1 class="logo"><a href="index.html">GO YE EUN</a></h1>
+            <nav class="nav">
+                <ul>
+                    <li class="nav-about">
+                        <button type="button" class="dark-light-toggle dark-light-toggle--nav" aria-label="다크/라이트 모드 전환">
+                            <span class="icon30 sun" aria-hidden="true">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"/></svg>
+                            </span>
+                            <span class="icon30 moon" aria-hidden="true">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"/></svg>
+                            </span>
+                        </button>
+                        <a href="index.html#about">About</a>
+                    </li>
+                    <li><a href="index.html#work">Work</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button type="button" class="dark-light-toggle dark-light-toggle--mobile" aria-label="다크/라이트 모드 전환">
+                    <span class="icon30 sun" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"/></svg>
+                    </span>
+                    <span class="icon30 moon" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"/></svg>
+                    </span>
+                </button>
+                <button type="button" class="nav-toggle" aria-label="메뉴 열기">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section id="hero" class="section hero hero--project">
+        <div class="hero-bg">
+            <div class="hero-image" style="background: linear-gradient(135deg, #1e2a1a 0%, #1a1a1a 100%);" aria-hidden="true"></div>
+            <div class="fx-grain" aria-hidden="true"></div>
+            <div class="hero-overlay"></div>
+            <canvas class="hero-gradient" aria-hidden="true"></canvas>
+        </div>
+        <div class="hero-content">
+            <p class="hero-label">Project</p>
+            <h2 class="hero-title">하이퍼닥터</h2>
+            <p class="hero-desc">의료·건강 정보 접근성을 높이기 위한 화면 설계와 브랜드 톤 작업입니다.</p>
+            <a href="index.html#work" class="hero-cta">작업 목록으로</a>
+        </div>
+    </section>
+
+    <section class="section portfolio-detail">
+        <div class="container">
+            <h2 class="section-title">Overview</h2>
+            <p class="section-desc">프로젝트 목적과 본인이 맡은 역할, 결과를 간단히 정리한 소개입니다.</p>
+            <div class="portfolio-body">
+                <p>하이퍼닥터는 신뢰감을 주는 색과 타이포그래피를 기준으로 컴포넌트 단위 UI를 정의했습니다. 복잡한 정보를 단계별로 나누어 인지 부담을 줄이는 데 초점을 맞췄습니다.</p>
+                <p>접근성 가이드를 참고해 대비와 터치 영역을 확보했고, 실제 사용 시나리오에 맞춘 프로토타입으로 피드백을 반영했습니다.</p>
+                <ul class="portfolio-meta">
+                    <li><span class="portfolio-meta-label">역할</span><span class="portfolio-meta-value">UI · 프로토타입</span></li>
+                    <li><span class="portfolio-meta-label">기간</span><span class="portfolio-meta-value">2025 · 10주</span></li>
+                    <li><span class="portfolio-meta-label">도구</span><span class="portfolio-meta-value">Figma</span></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="section work-showcase" aria-labelledby="showcase-title-hd">
+        <div class="container">
+            <h2 id="showcase-title-hd" class="section-title">Deliverables</h2>
+            <p class="section-desc">의료 서비스 흐름에 맞춘 메인 이용 화면 목업입니다.</p>
+
+            <h3 class="showcase-heading">웹 · 랜딩</h3>
+            <p class="showcase-lead">메인 진입 후 증상·진료 유형을 고르는 화면입니다. 그린 톤과 넓은 카드 터치 영역을 유지했습니다. 사이트 URL은 아래 링크 <code style="font-size:0.85em;">href</code>에서 바꿀 수 있습니다.</p>
+            <div class="work-slider-wrap site-mockup-slider">
+                <button type="button" class="work-btn work-btn-prev" aria-label="이전 웹 시안">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+                </button>
+                <button type="button" class="work-btn work-btn-next" aria-label="다음 웹 시안">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+                </button>
+                <div class="work-slider">
+                    <div class="work-track">
+                        <div class="work-slide">
+                            <a href="Hyperdoctor_sample_01-master/index.html" class="site-mockup-link" target="_blank" rel="noopener noreferrer" aria-label="하이퍼닥터 케어 홈 시안 (새 창)">
+                                <figure class="browser-mockup">
+                                    <div class="browser-mockup__chrome">
+                                        <div class="browser-mockup__dots" aria-hidden="true"><span></span><span></span><span></span></div>
+                                        <div class="browser-mockup__url">hyperdoctor.example / care</div>
+                                    </div>
+                                    <div class="browser-mockup__viewport" style="background-image: url('Hyperdoctor_sample_01-master/img/vis1-txt.png'), url('Hyperdoctor_sample_01-master/img/vis1-1.png'); background-size: contain, cover; background-position: center, center; background-repeat: no-repeat, no-repeat;"></div>
+                                    <figcaption class="browser-mockup__caption">
+                                        <strong>병원 홈페이지 시안-1</strong>
+                                        증상 상담·진료 예약·건강 기록으로 이어지는 3분할 카드와 상단 검색을 배치했습니다. 캡처는 <code style="font-size:0.85em;">background-image</code>로 교체하면 됩니다.
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </div>
+                        <div class="work-slide">
+                            <a href="Hyperdoctor_sample_02-master/index.html" class="site-mockup-link" target="_blank" rel="noopener noreferrer" aria-label="증상·진료 유형 선택 시안 (새 창)">
+                                <figure class="browser-mockup">
+                                    <div class="browser-mockup__chrome">
+                                        <div class="browser-mockup__dots" aria-hidden="true"><span></span><span></span><span></span></div>
+                                        <div class="browser-mockup__url">hyperdoctor.example / care / type</div>
+                                    </div>
+                                    <div class="browser-mockup__viewport" style="background-image: url('assets/hyperdoctor-slide2.png?v=1'); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
+                                    <figcaption class="browser-mockup__caption">
+                                        <strong>병원 홈페이지 시안-2</strong>
+                                        넓은 카드 터치 영역으로 주요 증상군과 진료 유형을 고르는 단계입니다. 시안 이미지를 이어 붙이면 됩니다.
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </div>
+                        <div class="work-slide">
+                            <a href="http://www.seoul-w-medical.com/" class="site-mockup-link" target="_blank" rel="noopener noreferrer" aria-label="예약·이력 연결 시안 (새 창)">
+                                <figure class="browser-mockup">
+                                    <div class="browser-mockup__chrome">
+                                        <div class="browser-mockup__dots" aria-hidden="true"><span></span><span></span><span></span></div>
+                                        <div class="browser-mockup__url">seoul-w-medical.com</div>
+                                    </div>
+                                    <div class="browser-mockup__viewport" style="background-image: url('assets/seoul-w-medical-thumb.png'); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
+                                    <figcaption class="browser-mockup__caption">
+                                        <strong>서울 w내과 서울점 홈페이지 리뉴얼 작업</strong>
+                                        선택한 유형에 맞춰 예약 또는 기존 진료 이력으로 이어지는 흐름용 화면입니다.
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-dots" aria-hidden="true"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p class="footer-text">© 2026 GO YE EUN. All rights reserved.</p>
+    </footer>
+</div>
+<script src="js/main.js"></script>
+</body>
+
+</html>

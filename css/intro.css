@@ -1,0 +1,97 @@
+@charset "utf-8";
+
+/* ===== Intro: 여러 파스텔 혼합 그라데이션 배경, 진행바 검은색 ===== */
+html.intro-page,
+html.intro-page body {
+    height: 100%;
+    margin: 0;
+    background: #e8e4f0;
+    --intro-text: #17131f;
+    --intro-text-muted: rgba(23, 19, 31, 0.82);
+    --intro-track: rgba(0, 0, 0, 0.10);
+    --intro-bar: linear-gradient(90deg, #6f63ff 0%, #ff7ab6 45%, #35d0ba 100%);
+}
+
+html.intro-page[data-theme='dark'],
+html.intro-page[data-theme='dark'] body {
+    background: #0d0d0d;
+}
+
+#intro-page {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    overflow: hidden;
+}
+
+.intro-bg {
+    position: absolute;
+    inset: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        135deg,
+        #e4ddf5 0%,
+        #f5e0e8 12%,
+        #e0f0ea 25%,
+        #e8eaf8 38%,
+        #f5e8d8 50%,
+        #e2e8f5 62%,
+        #f0e4f0 75%,
+        #e4f0e8 88%,
+        #e4ddf5 100%
+    );
+    background-size: 400% 400%;
+    animation: intro-gradient-move 14s ease-in-out infinite;
+}
+
+@keyframes intro-gradient-move {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+.intro-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 2rem;
+}
+
+.intro-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    color: var(--intro-text);
+    margin-bottom: 2rem;
+}
+
+.intro-progress-wrap {
+    width: min(280px, 80vw);
+    height: 6px;
+    background: var(--intro-track);
+    border-radius: 999px;
+    overflow: hidden;
+    margin: 0 auto 1rem;
+}
+
+.intro-progress-bar {
+    width: 0%;
+    height: 100%;
+    background: var(--intro-bar);
+    border-radius: 999px;
+    transition: width 0.15s ease-out;
+}
+
+.intro-percent {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--intro-text-muted);
+}
+
+/* 인트로는 파스텔 그라데이션 배경과 가독성을 우선해 텍스트/바 컬러를 고정 */

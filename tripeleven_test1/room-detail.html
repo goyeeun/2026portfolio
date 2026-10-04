@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>객실 상세 · 숲결 SOOPGYUL</title>
+  <meta name="description" content="숲결 펜션 객실의 상세 사진과 정보를 확인하세요." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Gowun+Batang:wght@400;700&family=Nanum+Myeongjo:wght@400;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="nav-slot"></div>
+
+  <!-- 비주얼 슬라이드 -->
+  <section class="hero hero--inner">
+    <div class="hero__slides" id="rdSlides"></div>
+    <button class="hero__arrow hero__arrow--prev" aria-label="이전 슬라이드">&#8249;</button>
+    <button class="hero__arrow hero__arrow--next" aria-label="다음 슬라이드">&#8250;</button>
+    <div class="hero__dots"></div>
+  </section>
+
+  <!-- 상세 갤러리 -->
+  <section class="section--tight" style="padding-top:80px;padding-bottom:80px;">
+    <div class="wrap room-detail reveal">
+      <div class="room-detail__gallery" id="rdGallery"></div>
+
+      <aside class="room-detail__info">
+        <span class="card__tag" id="rdInfoTag"></span>
+        <h2 class="title" id="rdInfoName" style="font-size:2rem;margin-top:8px;"></h2>
+        <p class="lead" id="rdDesc" style="margin-top:14px;font-size:1rem;"></p>
+        <ul class="room__features" id="rdFeatures"></ul>
+        <p class="room__price" id="rdPrice"></p>
+        <div class="room-detail__actions">
+          <a href="reserve-booking.html" class="btn btn--primary">예약하기</a>
+          <a href="rooms.html" class="btn btn--wood">목록으로</a>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 다른 객실 -->
+  <section class="section--tight" style="background:var(--cream-deep);padding:80px 0;">
+    <div class="wrap">
+      <div class="center reveal" style="margin-bottom:36px;">
+        <p class="eyebrow">More Rooms</p>
+        <h2 class="title">다른 객실도 둘러보세요</h2>
+      </div>
+      <div class="room-slider">
+        <button class="room-slider__arrow room-slider__arrow--prev" aria-label="이전 객실">&#8249;</button>
+        <div class="room-slider__viewport">
+          <div class="room-slider__track" data-room-list></div>
+        </div>
+        <button class="room-slider__arrow room-slider__arrow--next" aria-label="다음 객실">&#8250;</button>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-slot"></div>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>고예은 Portfolio</title>
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/style.css">
+<script>
+    (function () {
+        try {
+            var saved = localStorage.getItem('theme');
+            var prefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+            var theme = saved || (prefersLight ? 'light' : 'dark');
+            document.documentElement.dataset.theme = theme;
+        } catch (e) {}
+    })();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<div id="wrap">
+    <!-- Header -->
+    <header id="header">
+        <div class="header-inner">
+            <h1 class="logo"><a href="index.html?skipIntro=1">GO YE EUN</a></h1>
+            <nav class="nav">
+                <ul>
+                    <li class="nav-about">
+                        <button type="button" class="dark-light-toggle dark-light-toggle--nav" aria-label="다크/라이트 모드 전환">
+                            <span class="icon30 sun" aria-hidden="true">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"/></svg>
+                            </span>
+                            <span class="icon30 moon" aria-hidden="true">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"/></svg>
+                            </span>
+                        </button>
+                        <a href="#about">About</a>
+                    </li>
+                    <li><a href="#work">Work</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button type="button" class="dark-light-toggle dark-light-toggle--mobile" aria-label="다크/라이트 모드 전환">
+                    <span class="icon30 sun" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"/></svg>
+                    </span>
+                    <span class="icon30 moon" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"/></svg>
+                    </span>
+                </button>
+                <button type="button" class="nav-toggle" aria-label="메뉴 열기">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero: 대표 이미지 -->
+    <section id="hero" class="section hero">
+        <div class="hero-bg">
+            <div class="hero-image" aria-hidden="true"></div>
+            <div class="fx-grain" aria-hidden="true"></div>
+            <div class="hero-overlay"></div>
+            <!-- Moving gradient background (JS canvas) -->
+            <canvas class="hero-gradient" aria-hidden="true"></canvas>
+        </div>
+        <div class="hero-content">
+            <p class="hero-label">Portfolio</p>
+
+            <!-- Edwin Le 스타일: 반복 타이포 레이어 -->
+            <div class="hero-stack" aria-label="welcome to YE EUN PORTFOLIO">
+                <h2 class="hero-stack-line hero-title">
+                    <span class="hero-prefix">welcome to</span>
+                    <span class="hero-typed" data-typed-text="YE EUN PORTFOLIO"></span>
+                </h2>
+              
+            </div>
+
+            <p class="hero-desc">디자인과 개발로 가치를 만듭니다.</p>
+            
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section about">
+        <div class="container">
+            <h2 class="section-title">About</h2>
+            <div class="about-inner">
+                <div class="about-profile-wrap">
+                    <div class="about-profile" role="img" aria-label="프로필 사진">
+                        <!-- 프로필 이미지: .about-profile에 background-image: url('이미지경로'); 적용 -->
+                    </div>
+                </div>
+                <div class="about-content">
+                    <p class="about-lead">사용자 경험과 시각적 완성도를 중요하게 생각합니다.</p>
+                    <p class="about-body">다양한 프로젝트를 통해 기획, 디자인, 구현까지 경험해 왔습니다. 문제를 정의하고 해결책을 제시하는 과정을 좋아합니다.</p>
+                    <p class="about-body">여기에 본인 소개, 보유 스킬, 경력 요약 등을 자유롭게 작성해 주세요.</p>
+                    <div class="about-charts">
+                        <div class="skill-chart skill-chart--ai" style="--value-target: 90">
+                            <div class="skill-chart-ring">
+                                <span class="skill-chart-value">90%</span>
+                            </div>
+                            <span class="skill-chart-label">AI</span>
+                        </div>
+                        <div class="skill-chart skill-chart--photoshop" style="--value-target: 90">
+                            <div class="skill-chart-ring">
+                                <span class="skill-chart-value">90%</span>
+                            </div>
+                            <span class="skill-chart-label">Photoshop</span>
+                        </div>
+                        <div class="skill-chart skill-chart--html" style="--value-target: 88">
+                            <div class="skill-chart-ring">
+                                <span class="skill-chart-value">88%</span>
+                            </div>
+                            <span class="skill-chart-label">HTML</span>
+                        </div>
+                        <div class="skill-chart skill-chart--css" style="--value-target: 85">
+                            <div class="skill-chart-ring">
+                                <span class="skill-chart-value">85%</span>
+                            </div>
+                            <span class="skill-chart-label">CSS</span>
+                        </div>
+                        <div class="skill-chart skill-chart--js" style="--value-target: 80">
+                            <div class="skill-chart-ring">
+                                <span class="skill-chart-value">80%</span>
+                            </div>
+                            <span class="skill-chart-label">JS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work: 좌우 슬라이드, 350x350, 한 줄 3개, 이미지 호버 반투명 -->
+    <section id="work" class="section work">
+        <div class="container">
+            <h2 class="section-title">Work</h2>
+            <p class="section-desc">진행했던 프로젝트와 작업물입니다.</p>
+            <div class="work-slider-wrap">
+                <button type="button" class="work-btn work-btn-prev" aria-label="이전 슬라이드">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+                </button>
+                <button type="button" class="work-btn work-btn-next" aria-label="다음 슬라이드">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+                </button>
+                <div class="work-slider">
+                    <div class="work-track">
+                        <div class="work-slide">
+                            <ul class="work-list">
+                                <li class="work-item">
+                                    <a href="tripeleven.html" class="work-card" target="_blank">
+                                        <div class="work-thumb-wrap">
+                                            <div class="work-thumb" style="background-image: linear-gradient(135deg, #2d2520 0%, #1a1a1a 100%);"></div>
+                                            <div class="work-thumb-overlay"></div>
+                                        </div>
+                                        <div class="work-info">
+                                            <span class="work-category">projects</span>
+                                            <h3 class="work-title">트립일레븐</h3>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="work-slide">
+                            <ul class="work-list">
+                                <li class="work-item">
+                                    <a href="hyperdoctor.html" class="work-card" target="_blank">
+                                        <div class="work-thumb-wrap">
+                                            <div class="work-thumb" style="background-image: linear-gradient(135deg, #1e2a1a 0%, #1a1a1a 100%);"></div>
+                                            <div class="work-thumb-overlay"></div>
+                                        </div>
+                                        <div class="work-info">
+                                            <span class="work-category">PROJECT</span>
+                                            <h3 class="work-title">하이퍼닥터</h3>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="work-slide">
+                            <ul class="work-list">
+                                <li class="work-item">
+                                    <a href="cjs.html" class="work-card" target="_blank">
+                                        <div class="work-thumb-wrap">
+                                            <div class="work-thumb" style="background-image: linear-gradient(135deg, #1a1a2e 0%, #1a1a1a 100%);"></div>
+                                            <div class="work-thumb-overlay"></div>
+                                        </div>
+                                        <div class="work-info">
+                                            <span class="work-category">PROJECT</span>
+                                            <h3 class="work-title">씨에지에스</h3>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-dots" aria-hidden="true"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
+            <p class="section-desc"></p>
+            <div class="contact-content">
+                <ul class="contact-list">
+                    <li><a href="mailto:your@email.com">suii1020@naver.com</a></li>
+                    <li><a href="tel:010-6562-6295">T.010-6562-6295</a></li>                
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p class="footer-text">© 2026 GO YE EUN. All rights reserved.</p>
+    </footer>
+</div>
+<script src="js/main.js"></script>
+</body>
+
+</html>

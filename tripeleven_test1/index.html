@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>숲결 SOOPGYUL · 자연 속 프라이빗 펜션</title>
+  <meta name="description" content="숲의 결을 따라 흐르는 시간. 강원도 평창의 자연 속 프라이빗 펜션 숲결입니다." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Gowun+Batang:wght@400;700&family=Nanum+Myeongjo:wght@400;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="nav-slot"></div>
+
+  <!-- 히어로 슬라이드 -->
+  <section class="hero" id="heroSlider">
+    <div class="hero__slides">
+      <div class="hero__slide is-active" style="background-image:url('https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1920&q=80');">
+        <div class="hero__inner">
+          <p class="hero__eyebrow">Nature &amp; Rest</p>
+          <h1>숲의 결을 따라<br>흐르는 시간</h1>
+          <p>도심의 소음을 내려놓고, 바람과 나무와 별빛이 머무는 곳.<br>숲결에서 온전한 하루를 선물하세요.</p>
+        </div>
+      </div>
+      <div class="hero__slide" style="background-image:url('https://images.unsplash.com/photo-1505881502353-a1986add3762?auto=format&fit=crop&w=1920&q=80');">
+        <div class="hero__inner">
+          <p class="hero__eyebrow">Private Pool</p>
+          <h1>숲과 맞닿은<br>프라이빗 풀</h1>
+          <p>숲을 바라보며 즐기는 야외 인피니티 풀에서<br>오롯이 나만의 시간을 누리세요.</p>
+        </div>
+      </div>
+      <div class="hero__slide" style="background-image:url('https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?auto=format&fit=crop&w=1920&q=80');">
+        <div class="hero__inner">
+          <p class="hero__eyebrow">Starlight Night</p>
+          <h1>쏟아질 듯한<br>별빛 가득한 밤</h1>
+          <p>청정 고원의 맑은 밤하늘 아래<br>따뜻한 스파와 함께하는 특별한 하루.</p>
+        </div>
+      </div>
+    </div>
+
+    <button class="hero__arrow hero__arrow--prev" id="heroPrev" aria-label="이전 슬라이드">&#8249;</button>
+    <button class="hero__arrow hero__arrow--next" id="heroNext" aria-label="다음 슬라이드">&#8250;</button>
+
+    <div class="hero__dots" id="heroDots"></div>
+  </section>
+
+  <!-- 컨셉 -->
+  <section class="section section--air concept">
+    <div class="wrap concept__inner reveal">
+      <span class="label">About the Concept</span>
+      <h2 class="concept__title">도심의 소음을 내려놓고,<br>숲의 결을 따라 흐르는 시간</h2>
+      <p class="concept__text">해발 700m 청정 고원, 사계절 색을 달리하는 숲 한가운데 숲결이 있습니다. 바람과 나무와 별빛이 머무는 이곳에서, 머무는 동안만큼은 오롯이 당신만의 속도로 흐르는 하루를 누리세요.</p>
+      <span class="concept__sign">SOOPGYUL</span>
+    </div>
+  </section>
+
+  <!-- 건축 / 자연 -->
+  <section class="section showcase">
+    <div class="wrap showcase__grid">
+      <div class="showcase__media reveal">
+        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1200&q=80" alt="숲결 펜션 전경" />
+        <span class="showcase__vlabel">Exterior</span>
+      </div>
+      <div class="showcase__body reveal">
+        <span class="label">Architecture &amp; Nature</span>
+        <h2 class="title">자연을 닮은<br>고요한 머무름</h2>
+        <p class="lead">통창 너머로 사계절이 흐르고, 장작 향과 별빛이 머무는 공간. 숲결은 자연의 결을 그대로 담아 당신에게 가장 다정한 휴식을 건넵니다.</p>
+        <a href="about-landscape.html" class="link-underline">펜션 둘러보기</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 객실 미리보기 -->
+  <section class="section section--air" style="background:var(--cream-deep);">
+    <div class="wrap">
+      <div class="center reveal" style="margin-bottom:60px;">
+        <span class="label" style="display:block;margin-bottom:24px;">Our Rooms</span>
+        <h2 class="title">머무는 모든 순간이<br>풍경이 되도록</h2>
+      </div>
+      <div class="room-slider" id="roomSlider">
+        <button class="room-slider__arrow room-slider__arrow--prev" id="roomPrev" aria-label="이전 객실">&#8249;</button>
+
+        <div class="room-slider__viewport">
+          <div class="room-slider__track" data-room-list></div>
+        </div>
+
+        <button class="room-slider__arrow room-slider__arrow--next" id="roomNext" aria-label="다음 객실">&#8250;</button>
+      </div>
+      <div class="center" style="margin-top:54px;">
+        <a href="rooms.html" class="link-underline">All Room View</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 부대시설 -->
+  <section class="section section--air">
+    <div class="wrap">
+      <div class="center reveal" style="margin-bottom:56px;">
+        <span class="label" style="display:block;margin-bottom:24px;">Special Facilities</span>
+        <h2 class="title">숲결이 준비한 특별함</h2>
+      </div>
+      <div class="facilities-grid reveal">
+        <a href="special-pool.html" class="facility">
+          <div class="facility__img" style="background-image:url('https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=900&q=80');"></div>
+          <div class="facility__body">
+            <span class="facility__no">01</span>
+            <h3>야외수영장</h3>
+            <p>숲을 바라보며 즐기는 프라이빗 인피니티 풀.</p>
+            <span class="facility__more">자세히 보기 &rarr;</span>
+          </div>
+        </a>
+        <a href="special-bbq.html" class="facility">
+          <div class="facility__img" style="background-image:url('https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=80');"></div>
+          <div class="facility__body">
+            <span class="facility__no">02</span>
+            <h3>바베큐</h3>
+            <p>가족·연인과 함께하는 프라이빗 데크 BBQ.</p>
+            <span class="facility__more">자세히 보기 &rarr;</span>
+          </div>
+        </a>
+        <a href="special-spa.html" class="facility">
+          <div class="facility__img" style="background-image:url('https://images.unsplash.com/photo-1610641818989-c2051b5e2cfd?auto=format&fit=crop&w=900&q=80');"></div>
+          <div class="facility__body">
+            <span class="facility__no">03</span>
+            <h3>스파</h3>
+            <p>별빛 아래 따뜻한 물에 몸을 맡기는 힐링 스파.</p>
+            <span class="facility__more">자세히 보기 &rarr;</span>
+          </div>
+        </a>
+        <a href="about-landscape.html" class="facility">
+          <div class="facility__img" style="background-image:url('https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=900&q=80');"></div>
+          <div class="facility__body">
+            <span class="facility__no">04</span>
+            <h3>숲 산책로</h3>
+            <p>펜션에서 이어지는 자작나무 숲길 트레킹.</p>
+            <span class="facility__more">자세히 보기 &rarr;</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="cta__bg" style="background-image:url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1920&q=80');"></div>
+    <div class="cta__inner wrap reveal">
+      <p class="eyebrow" style="color:var(--wood-light);">Reservation</p>
+      <h2 class="title">Your Rest,<br>Our Priority</h2>
+      <p class="lead">가장 빛나는 계절은 언제나 지금입니다.<br>숲결에서의 다정한 하루를 예약하세요.</p>
+      <p style="margin-top:34px;">
+        <a href="reserve-booking.html" class="btn btn--ghost">예약하기</a>
+      </p>
+    </div>
+  </section>
+
+  <div id="footer-slot"></div>
+  <script src="script.js"></script>
+</body>
+</html>
